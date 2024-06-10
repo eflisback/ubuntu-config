@@ -45,9 +45,9 @@ pictures=(
     "lock-screen.jpg"
 )
 
-echo "Linknig picture files..."
-for picture in "$pictures[@]}"; do
+for picture in "${pictures[@]}"; do
     ln -s "~/ubuntu-config/pictures/$picture" "~/Pictures/$picture"
+    echo "--- $picture linked to ~/Pictures/$picture ---"
 done
 
 echo "Set-up complete"
