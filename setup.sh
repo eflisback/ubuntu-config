@@ -2,7 +2,7 @@
 
 # Repository
 echo "Cloning repository..."
-git clone git@github.com:eflisback/.ubuntu-config.git ~/ubuntu-config
+git clone git@github.com:eflisback/ubuntu-config.git ~/ubuntu-config
 
 echo "Updating package list... (logs available in ~/ubuntu-setup/apt-log.txt)"
 sudo apt update -y &>~/ubuntu-setup/apt-log.txt && sudo apt upgrade -y &>~/ubuntu-setup/apt-log.txt
@@ -47,7 +47,7 @@ pictures=(
 
 echo "Linknig picture files..."
 for picture in "$pictures[@]}"; do
-    ln -s "~/ubuntu-config/pictures/$picture" "~/Pictures/picture"
+    ln -s "~/ubuntu-config/pictures/$picture" "~/Pictures/$picture"
 done
 
 echo "Set-up complete"
